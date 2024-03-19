@@ -1,0 +1,12 @@
+import sqlite3
+Connection = sqlite3.connect("XYZCompanyDatabase")
+cursor = connection.cursor()
+cursor.execute(Select sum (orders.quantity), items.item_name, customer.customer, customer.age from customer join sales on sales.customer_id = customer.customer_id join orders on 
+sales.sales_id = orders.sales_id join items on items.item_id = orders.item_id where orders.quantity!= 'NULL' group by orders.item_id)
+
+
+To store the above query in CSV,
+import csv
+with open('file.csv','w', newline=';') as file.
+writer =csv.writer(file)
+writer.writeeow(['We can define the desired rows and columns this way here'])
